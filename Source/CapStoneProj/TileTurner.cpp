@@ -32,13 +32,17 @@ void ATileTurner::TurnTile()
 
 	GetOverlappingActors(tiles, ATile::StaticClass());
 
+	//GetOverlappingActors(tiles, ATile::);
+
 	FRotator addRotation;
 
 	addRotation.Yaw = 90;
+	addRotation.Pitch = 0;
+	addRotation.Roll = 0;
 
 	for (AActor* tileToTurn : tiles)
 	{
-		tileToTurn->AddActorWorldRotation(addRotation);
+		tileToTurn->AddActorLocalRotation(addRotation);
 		//TArray<AActor*>::tileToTurn.AddActorWorldRotation(addRotation);
 		//TArray<AActor*>::tileToTurn->AddActorWorldRotation(addRotation);
 		//AActor::tileToTurn->AddActorWorldRotation(addRotation);
