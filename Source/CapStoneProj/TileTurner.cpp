@@ -38,7 +38,7 @@ void ATileTurner::TurnTile()
 
 	for (AActor* tileToTurn : tiles)
 	{
-		//tileToTurn.AddActorWorldRotation(addRotation);
+		tileToTurn->AddActorWorldRotation(addRotation);
 		//TArray<AActor*>::tileToTurn.AddActorWorldRotation(addRotation);
 		//TArray<AActor*>::tileToTurn->AddActorWorldRotation(addRotation);
 		//AActor::tileToTurn->AddActorWorldRotation(addRotation);
